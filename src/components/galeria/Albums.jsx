@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { InicioPagina } from "../InicioPagina";
 import { AlbumsCard } from "../AlbumsCard";
 import { Pagination } from "../Pagination";
+import album from "../../../dist/assets/album.jpg";
 
 export const Albums = () => {
   const [albums, setAlbums] = useState([]);
-  const [totalElements, setTotalElements] = useState(-1);
+  const [totalElements, setTotalElements] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
   const pageSize = 12;
   const albumRef = useRef();
@@ -63,7 +64,7 @@ export const Albums = () => {
       {/* Inicio */}
       <InicioPagina
         text={"Álbumes de Fotos"}
-        imagen={"album.jpg"}
+        imagen={album}
       ></InicioPagina>{" "}
       <div className="mt-10 xl:mt-16 mb-10 xl:mx-40" ref={albumRef}>
         <AlbumsCard

@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import { links } from "../../constants";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
-export const NavLinks = () => {
+export const NavLinks = (close, setClose) => {
   const [heading, setHeading] = useState("");
   const [subHeading, setSubHeading] = useState("");
+  const handleClose = (c) => {
+    setClose(c);
+  };
   return (
     <>
       {links.map((link, linkIndex) => (
@@ -42,6 +45,9 @@ export const NavLinks = () => {
                         <Link
                           to={mysublinks.link}
                           className="text-lg hover:text-dark-red"
+                          onClick={() => {
+                            handleClose(false);
+                          }}
                         >
                           {mysublinks.Head}
                         </Link>
@@ -59,17 +65,18 @@ export const NavLinks = () => {
                   {link.sublinks.map((slinks, slinksIndex) => (
                     <div key={`${linkIndex}-${slinksIndex}`}>
                       <div>
-                        <a
-                          href={slinks.link}
-                          onClick={() =>
+                        <Link
+                          to={slinks.link}
+                          onClick={() => {
+                            handleClose(false);
                             subHeading !== slinks.Head
                               ? setSubHeading(slinks.Head)
-                              : setSubHeading("")
-                          }
+                              : setSubHeading("");
+                          }}
                           className="py-4 pl-7 font-extralight md:pr-0 pr-5 flex justify-between items-center "
                         >
                           {slinks.Head}
-                        </a>
+                        </Link>
                       </div>
                     </div>
                   ))}

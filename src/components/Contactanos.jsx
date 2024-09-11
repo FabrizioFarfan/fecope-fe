@@ -1,9 +1,9 @@
 import React from "react";
 import { Mail, TvMinimalPlay } from "lucide-react";
 import { Link } from "react-router-dom";
-import instagram from "../assets/instagram.svg";
-import facebook from "../assets/facebook.svg";
-import tiktok from "../assets/tiktok.svg";
+import instagram from "../../dist/assets/instagram.svg";
+import facebook from "../../dist/assets/facebook.svg";
+import tiktok from "../../dist/assets/tiktok.svg";
 
 export const Contactanos = () => {
   return (

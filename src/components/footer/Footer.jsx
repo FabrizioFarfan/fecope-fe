@@ -1,8 +1,8 @@
 import React from "react";
-import instagram from "../../assets/instagram.svg";
-import facebook from "../../assets/facebook.svg";
-import tiktok from "../../assets/tiktok.svg";
-import { useRouteLoaderData } from "react-router-dom";
+import instagram from "../../../dist/assets/instagram.svg";
+import facebook from "../../../dist/assets/facebook.svg";
+import tiktok from "../../../dist/assets/tiktok.svg";
+import { Link, useRouteLoaderData } from "react-router-dom";
 import { Networking } from "../Networking";
 
 export const Footer = () => {
@@ -21,20 +21,20 @@ export const Footer = () => {
           <h4 className="font-semibold mb-2">Enlaces Adicionales</h4>
           <ul className="font-extralight">
             <li className="mb-1">
-              <a href="/contactanos" className="hover:underline">
+              <Link to="/contactanos" className="hover:underline">
                 Contàctanos
-              </a>
+              </Link>
             </li>
             <li className="mb-1">
-              <a href="/nuestra-privacy" className="hover:underline">
+              <Link to="/nuestra-privacy" className="hover:underline">
                 Nuestra Privacy
-              </a>
+              </Link>
             </li>
             {!token && (
               <li className="mb-1">
-                <a href="/login" className="hover:underline">
+                <Link to="/login" className="hover:underline">
                   Admin
-                </a>
+                </Link>
               </li>
             )}
           </ul>

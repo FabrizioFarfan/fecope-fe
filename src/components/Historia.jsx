@@ -1,17 +1,15 @@
 import React from "react";
 import { InicioPagina } from "./InicioPagina";
-import sello from "../assets/sello.png";
-import linea from "../assets/linea.png";
+import sello from "../../dist/assets/sello.png";
+import linea from "../../dist/assets/linea.png";
+import historia from "../../dist/assets/historia.jpg";
 
 export const Historia = () => {
   return (
     <>
-      <InicioPagina imagen="fecop1.jpg" text="Historia"></InicioPagina>
+      <InicioPagina imagen={historia} text="Historia"></InicioPagina>
       <div className="scroll-container p-6">
-        <div
-          className="relative p-6 bg-cover bg-center rounded-sm shadow-2xl text-dark-red  xl:mx-36 xl:my-16"
-          style={{ backgroundImage: "url('src/assets/pergamino.jpg')" }}
-        >
+        <div className="relative p-6 bg-cover bg-center rounded-sm shadow-2xl text-dark-red  xl:mx-36 xl:my-16 bg-gradient-to-b from-[#f4f2e7d0] to-[#f4f2e7c0]">
           <img src={sello} alt="sello" className="m-3 xl:size-40 size-20"></img>
           <h2 className="xl:text-4xl text-2xl underline font-bold xl:mb-20 mb-10 oleo text-center ">
             La Historia de FECOPE

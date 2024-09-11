@@ -8,19 +8,15 @@ import { Contactanos } from "./Contactanos";
 import { DiasporaPeruana } from "./DiasporaPeruana";
 import { LastNews } from "./LastNews";
 import { SeccionVideo } from "./SeccionVideo";
-import { Networking } from "./Networking";
 import { videos } from "../constants";
+import home from "../../dist/assets/logo.jpeg";
 
 export const Home = () => {
   return (
     <>
-      <InicioPagina
-        imagen={"logo2.jpg"}
-        text={""}
-        opacity="bg-opacity-0"
-        opacityText="bg-opacity-0"
-        contain="bg-contain"
-      ></InicioPagina>
+      <div className="flex justify-center">
+        <img src={home} alt="home" className="lg:w-1/2 2/3"></img>
+      </div>
       <div className="relative flex justify-center items-center bg-true-red text-true-white py-16   mt-2 rounded-3xl bg-opacity-75 mx-14">
         <h2 className="text-4xl lg:text-7xl lobster-regular w-full px-5 lg:px-20 text-center">
           Bienvenido a la Página Oficial de FECOPE

@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { Cards } from "../Cards";
 import { InicioPagina } from "../InicioPagina";
 import { Pagination } from "../Pagination";
+import evento from "../../../dist/assets/evento.png";
 
 export const Eventos = () => {
   const [eventos, setEventos] = useState([]);
-  const [totalElements, setTotalElements] = useState();
+  const [totalElements, setTotalElements] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
   const pageSize = 9;
   const eventoRef = useRef();
@@ -62,7 +63,7 @@ export const Eventos = () => {
       {/* Inicio */}
       <InicioPagina
         text={"Bienvenido a los Eventos"}
-        imagen={"evento.png"}
+        imagen={evento}
       ></InicioPagina>
       {/* Eventos Card */}
       <div className="mt-10 xl:mt-16 mb-10 xl:mx-40" ref={eventoRef}>

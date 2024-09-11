@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { Cards } from "../Cards";
 import { InicioPagina } from "../InicioPagina";
 import { Pagination } from "../Pagination";
+import noticia from "../../../dist/assets/noticia.jpg";
 
 export const Noticias = () => {
   const [eventos, setEventos] = useState([]);
-  const [totalElements, setTotalElements] = useState(-1);
+  const [totalElements, setTotalElements] = useState(0);
   const [currentPage, setCurrentPage] = useState(0);
   const pageSize = 9;
   const noticiaRef = useRef();
@@ -60,7 +61,7 @@ export const Noticias = () => {
     <>
       <InicioPagina
         text={"Bienvenido a las Noticias"}
-        imagen={"noticia.jpg"}
+        imagen={noticia}
       ></InicioPagina>
       <div className="mt-10 xl:mt-16 mb-10 xl:mx-40 sm:mx-20">
         <Cards

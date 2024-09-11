@@ -23,7 +23,7 @@ export const Caracteristicas = () => {
                 <h5 className="mt-1 mb-6 text-xl text-true-red">
                   {caracteristica.titulo}
                 </h5>
-                <p className="text-md p-2 mb-20 text-dark-red font-light">
+                <p className="text-md p-2 mb-20 lg:mr-1 mr-10 text-dark-red font-light">
                   {caracteristica.descripcion}
                 </p>
               </div>

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Carousel } from "./Carousel";
+import { Link } from "react-router-dom";
 
 export const DiasporaPeruana = () => {
   const [diasporas, setDiasporas] = useState([
@@ -51,13 +52,13 @@ export const DiasporaPeruana = () => {
           <p className="lg:text-xl text-lg text-center lg:text-left font-extralight text-dark-red max-w-full lg:max-w-4xl">
             No te pierdas la oportunidad de revivir los momentos más destacados
             de nuestros eventos y actividades. Haz clic en nuestra sección de{" "}
-            <a href="/videos" className="font-semibold underline">
+            <Link to="/videos" className="font-semibold underline">
               videos
-            </a>{" "}
+            </Link>{" "}
             para ver las grabaciones más emocionantes y en{" "}
-            <a href="/album-fotos" className="font-semibold underline">
+            <Link to="/album-fotos" className="font-semibold underline">
               fotos
-            </a>{" "}
+            </Link>{" "}
             para descubrir las mejores imágenes que capturan la esencia de cada
             evento. Sumérgete en nuestras experiencias y mantente conectado con
             todo lo que hacemos. Esto y mucho más te espera en este lugar, todos

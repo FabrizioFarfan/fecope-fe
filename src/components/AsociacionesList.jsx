@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { paisesEuropeos } from "../constants";
-import instagram from "../assets/instagram.svg";
-import facebook from "../assets/facebook.svg";
-import { EarIcon, Earth, EarthIcon, Globe } from "lucide-react";
+import instagram from "../../dist/assets/instagram.svg";
+import facebook from "../../dist/assets/facebook.svg";
+import { Globe } from "lucide-react";
 
 export const AsociacionesList = () => {
   const [asociaciones, setAsociaciones] = useState([]);

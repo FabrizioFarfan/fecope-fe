@@ -11,13 +11,17 @@ export const InicioPagina = ({
   return (
     <div className={`relative py-24 text-center ${textColor}`}>
       {/* Div para el fondo con blur */}
-      <div
-        className={`absolute inset-0 ${contain}  bg-no-repeat bg-center `}
-        style={{ backgroundImage: `url('src/assets/${imagen}')` }}
-        aria-hidden="true" // Esto indica que este div es solo decorativo
-      ></div>
+      <img
+        src={imagen}
+        alt="Descripción de la imagen"
+        className={`absolute inset-0 ${contain} bg-no-repeat bg-center w-full lg:h-[370px] h-5/6 object-cover object-center`}
+        aria-hidden="true"
+      />
+
       {/* Overlay rojo con opacidad */}
-      <div className={`absolute inset-0 bg-light-red ${opacity}`}></div>
+      <div
+        className={`absolute top-0 left-0 w-full h-1/2 bg-light-red ${opacity}`}
+      ></div>
 
       {/* Contenido encima del fondo */}
       <div

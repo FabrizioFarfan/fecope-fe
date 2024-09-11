@@ -3,17 +3,18 @@ import { InicioPagina } from "../InicioPagina";
 import { extravideos, videos } from "../../constants";
 import { SeccionVideo } from "../SeccionVideo";
 import ReactPlayer from "react-player";
+import video from "../../../dist/assets/vid1.png";
 
 export const Videos = () => {
   return (
     <>
       <InicioPagina
         text={"Videos"}
-        imagen={"vid1.png"}
+        imagen={video}
         contain="bg-cover"
       ></InicioPagina>
 
-      <div className="flex justify-center text-dark-red lg:text-4xl text-2xl italic mt-16">
+      <div className="flex justify-center text-dark-red lg:text-4xl text-2xl italic mt-16 underline">
         <h1>Nuestros videos</h1>
       </div>
       <div className="mt-10 xl:mt-16 mb-10 xl:mx-40 mx-10">
@@ -32,7 +33,7 @@ export const Videos = () => {
         ))}
 
         <hr className="text-dark-red mx-16"></hr>
-        <div className="flex justify-center text-dark-red lg:text-4xl text-2xl italic mt-16">
+        <div className="flex justify-center text-dark-red lg:text-4xl text-2xl italic mt-16 underline">
           <h1>Más videos de nosotros</h1>
         </div>
 
