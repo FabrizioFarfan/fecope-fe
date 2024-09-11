@@ -19,7 +19,7 @@ export const NoticiaForm = () => {
     formData.append("descripcion", descripcionInputRef.current.value);
     formData.append("contenido", contenidoInputRef.current.value);
     console.log(formData);
-    fetch("http://localhost:8081/v1/create-noticia", {
+    fetch("http://api.fecope.eu/v1/create-noticia", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

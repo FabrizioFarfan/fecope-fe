@@ -14,6 +14,7 @@ import yt from "../../dist/assets/Youtube_logo.png";
 import tt from "../../dist/assets/tiktok.png";
 import fb from "../../dist/assets/Facebook.png";
 import inst from "../../dist/assets/instagram.svg";
+import { Link } from "react-router-dom";
 
 export const extravideos = [
   {
@@ -85,12 +86,12 @@ export const links = [
     sublinks: [
       {
         Head: "eventos",
-        link: "/eventos",
+        link: "eventos",
         sublink: [],
       },
       {
         Head: "noticias",
-        link: "/noticias",
+        link: "noticias",
         sublink: [],
       },
     ],
@@ -102,17 +103,74 @@ export const links = [
     sublinks: [
       {
         Head: "Álbumes",
-        link: "/album-fotos",
+        link: "album-fotos",
         sublink: [],
       },
       {
         Head: "videos",
-        link: "/videos",
+        link: "videos",
         sublink: [],
       },
     ],
   },
 ];
+
+export function linki(param) {
+  switch (param) {
+    case "eventos":
+      return (
+        <Link
+          to="/eventos"
+          className="text-lg hover:text-dark-red"
+          onClick={() => {
+            handleClose(false);
+          }}
+        >
+          Eventos
+        </Link>
+      );
+
+    case "noticias":
+      return (
+        <Link
+          to="/noticias"
+          className="text-lg hover:text-dark-red"
+          onClick={() => {
+            handleClose(false);
+          }}
+        >
+          Noticias
+        </Link>
+      );
+    case "album-fotos":
+      return (
+        <Link
+          to="/album-fotos"
+          className="text-lg hover:text-dark-red"
+          onClick={() => {
+            handleClose(false);
+          }}
+        >
+          Álbumes
+        </Link>
+      );
+    case "videos":
+      return (
+        <Link
+          to="/videos"
+          className="text-lg hover:text-dark-red"
+          onClick={() => {
+            handleClose(false);
+          }}
+        >
+          Videos
+        </Link>
+      );
+
+    default:
+      break;
+  }
+}
 
 export const caracteristicas = [
   {

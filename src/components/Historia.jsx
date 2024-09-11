@@ -9,13 +9,13 @@ export const Historia = () => {
     <>
       <InicioPagina imagen={historia} text="Historia"></InicioPagina>
       <div className="scroll-container p-6">
-        <div className="relative p-6 bg-cover bg-center rounded-sm shadow-2xl text-dark-red  xl:mx-36 xl:my-16 bg-gradient-to-b from-[#f4f2e7d0] to-[#f4f2e7c0]">
+        <div className="relative p-6 bg-cover bg-center rounded-sm shadow-2xl text-dark-red  xl:mx-36 xl:my-16 bg-gradient-to-b from-[#eae2b5d0] to-[#ecdc85c0]">
           <img src={sello} alt="sello" className="m-3 xl:size-40 size-20"></img>
           <h2 className="xl:text-4xl text-2xl underline font-bold xl:mb-20 mb-10 oleo text-center ">
             La Historia de FECOPE
           </h2>
           <div className="absolute inset-0 bg-black opacity-50 rounded-lg"></div>
-          <p className="relative text-white font-light xl:text-xl leading-relaxed xl:mx-56 z-10 mx-10 text-base italic">
+          <p className="relative text-white font-light xl:text-xl leading-relaxed xl:mx-56 z-10 mx-10 text-base italic shadow-sm">
             El 15 de marzo del 2009 en la ciudad de Turín, se desarrolló una
             asamblea general de peruanos emigrantes, en la Sala de Convenciones
             de la Región Piemonte - Turín / Italia, con la asistencia de las

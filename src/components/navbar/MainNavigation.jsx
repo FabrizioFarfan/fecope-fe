@@ -41,7 +41,7 @@ export const MainNavigation = () => {
             <li>
               <NavLink
                 to="/"
-                className="relative py-7 px-3 inline-block group cursor-pointer"
+                className="relative py-5 px-3 inline-block group cursor-pointer"
               >
                 Home
                 {/* Subrayado animado */}
@@ -51,7 +51,7 @@ export const MainNavigation = () => {
             <li>
               <NavLink
                 to="/historia"
-                className="relative py-7 px-3 inline-block group cursor-pointer"
+                className="relative py-5 px-3 inline-block group cursor-pointer"
               >
                 Historia
                 {/* Subrayado animado */}
@@ -61,7 +61,7 @@ export const MainNavigation = () => {
             <li>
               <NavLink
                 to="/asociaciones"
-                className="relative py-7 px-3 inline-block group cursor-pointer"
+                className="relative py-5 px-3 inline-block group cursor-pointer"
               >
                 Asociaciones
                 {/* Subrayado animado */}
@@ -72,7 +72,7 @@ export const MainNavigation = () => {
           </ul>
           {token && (
             <NavLink to="/admin" className="text-true-white md:block hidden">
-              <div className="py-7 px-3  uppercase font-extralight flex gap-1">
+              <div className="py-5 px-3  uppercase font-extralight flex gap-1">
                 <User></User>
                 Admin
               </div>
@@ -90,7 +90,7 @@ export const MainNavigation = () => {
             <div className="bg-true-red">
               <NavLink
                 to="/"
-                className="py-7 px-3 inline-block w-full"
+                className="py-5 px-3 inline-block w-full"
                 onClick={() => setOpen(!open)}
               >
                 Home
@@ -101,10 +101,54 @@ export const MainNavigation = () => {
             <div className="bg-true-red">
               <NavLink
                 to="/historia"
-                className="py-7 px-3 inline-block w-full"
+                className="py-5 px-3 inline-block w-full"
                 onClick={() => setOpen(!open)}
               >
                 Historia
+              </NavLink>
+            </div>
+          </li>
+          <li>
+            <div className="bg-true-red">
+              <NavLink
+                to="/asociaciones"
+                className="py-5 px-3 inline-block w-full"
+                onClick={() => setOpen(!open)}
+              >
+                Asociaciones
+              </NavLink>
+            </div>
+          </li>
+          <li>
+            <div className="bg-true-red">
+              <NavLink
+                to="/eventos"
+                className="py-5 px-3 inline-block w-full"
+                onClick={() => setOpen(!open)}
+              >
+                Eventos
+              </NavLink>
+            </div>
+          </li>
+          <li>
+            <div className="bg-true-red">
+              <NavLink
+                to="/noticias"
+                className="py-5 px-3 inline-block w-full"
+                onClick={() => setOpen(!open)}
+              >
+                Noticias
+              </NavLink>
+            </div>
+          </li>
+          <li>
+            <div className="bg-true-red">
+              <NavLink
+                to="/album-fotos"
+                className="py-5 px-3 inline-block w-full"
+                onClick={() => setOpen(!open)}
+              >
+                Álbumes
               </NavLink>
             </div>
           </li>
@@ -112,27 +156,24 @@ export const MainNavigation = () => {
           <li>
             <div className="bg-true-red">
               <NavLink
-                to="/asociaciones"
-                className="py-7 px-3 inline-block w-full"
+                to="/videos"
+                className="py-5 px-3 inline-block w-full"
                 onClick={() => setOpen(!open)}
               >
-                Asociaciones
+                Videos
               </NavLink>
             </div>
           </li>
 
-          <div className="bg-true-red">
-            <NavLinks close={open} setClose={setOpen}></NavLinks>
-          </div>
           {token && (
             <NavLink
-              to="/admin"
+              to="/videos"
               className="text-true-white"
               onClick={() => setOpen(!open)}
             >
               <div className="py-7 px-3  uppercase font-extralight flex gap-1 bg-true-red">
                 <User></User>
-                Admin
+                Videos
               </div>
             </NavLink>
           )}

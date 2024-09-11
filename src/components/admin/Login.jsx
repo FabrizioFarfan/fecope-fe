@@ -1,17 +1,18 @@
 import React, { useState } from "react";
-import { redirect } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [authError, setAuthError] = useState(null);
+ const navigate = useNavigate()
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch(" http://localhost:8081/auth", {
+      const response = await fetch("http://api.fecope.eu/auth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -37,7 +38,7 @@ export const Login = () => {
       const expiration = new Date();
       expiration.setHours(expiration.getHours() + 24);
       localStorage.setItem("expiration", expiration.toISOString());
-      redirect("/");
+      navigate("/admin");
     } catch (error) {
       console.error("Error during authentication:", error);
       setIsSubmitting(false);

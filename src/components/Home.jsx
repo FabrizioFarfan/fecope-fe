@@ -1,5 +1,4 @@
 import React from "react";
-import { InicioPagina } from "./InicioPagina";
 import { Caracteristicas } from "./Caracteristicas";
 import { CheckList } from "./CheckList";
 import { Cargos } from "./Cargos";

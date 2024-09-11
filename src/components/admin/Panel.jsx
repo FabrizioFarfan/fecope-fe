@@ -10,10 +10,10 @@ export const Panel = () => {
         <h1 className="text-xl font-bold mb-4 underline">News</h1>
         <ul className="space-y-4">
           <li className="cursor-pointer hover:text-true-red">
-            <Link to="eventos">Eventos</Link>
+            <Link to="/eventos">Eventos</Link>
           </li>
           <li className="cursor-pointer hover:text-true-red">
-            <Link to="noticias">Noticias</Link>
+            <Link to="/noticias">Noticias</Link>
           </li>
         </ul>
       </div>
@@ -23,10 +23,10 @@ export const Panel = () => {
         <h1 className="text-xl font-bold mb-4 underline">Asociaciones</h1>
         <ul className="space-y-4">
           <li className="cursor-pointer hover:text-true-red">
-            <Link to="asociaciones-fecope">Asociaciones con Fecope</Link>
+            <Link to="/asociaciones-fecope">Asociaciones con Fecope</Link>
           </li>
           <li className="cursor-pointer hover:text-true-red">
-            <Link to="partners">Socios</Link>
+            <Link to="/partners">Socios</Link>
           </li>
         </ul>
       </div>
@@ -36,10 +36,10 @@ export const Panel = () => {
         <h1 className="text-xl font-bold mb-4 underline">Galeria</h1>
         <ul className="space-y-4">
           <li className="cursor-pointer hover:text-true-red">
-            <Link to="albums-fotos">Álbumes</Link>
+            <Link to="/albums-fotos">Álbumes</Link>
           </li>
           <li className="cursor-pointer hover:text-true-red">
-            <Link to="diaspora">Diáspora</Link>
+            <Link to="/diaspora">Diáspora</Link>
           </li>
         </ul>
       </div>

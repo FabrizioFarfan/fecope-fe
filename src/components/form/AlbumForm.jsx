@@ -40,7 +40,7 @@ export const AlbumForm = () => {
     });
 
     try {
-      const response = await fetch("http://localhost:8081/v1/create-album", {
+      const response = await fetch("http://api.fecope.eu/v1/create-album", {
         method: "POST",
         headers: {
           Authorization: `Bearer ${token}`, // Añade el token aquí si es necesario
