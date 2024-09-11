@@ -126,17 +126,17 @@ export const form = (param) => {
 export const urlToFetch = (param) => {
   switch (param) {
     case "eventos":
-      return "http://api.fecope.eu/v1/all-eventos";
+      return "http://localhost:8081/v1/all-eventos";
     case "noticias":
-      return "http://api.fecope.eu/v1/all-noticias";
+      return "http://localhost:8081/v1/all-noticias";
     case "asociaciones-fecope":
-      return "http://api.fecope.eu/v1/all-asociaciones";
+      return "http://localhost:8081/v1/all-asociaciones";
     case "albums-fotos":
-      return "http://api.fecope.eu/v1/all-albums";
+      return "http://localhost:8081/v1/all-albums";
     case "partners":
-      return "http://api.fecope.eu/v1/all-partners";
+      return "http://localhost:8081/v1/all-partners";
     case "diaspora":
-      return "http://api.fecope.eu/v1/all-diasporas";
+      return "http://localhost:8081/v1/all-diasporas";
     default:
       break;
   }
@@ -145,17 +145,17 @@ export const urlToFetch = (param) => {
 export const urlToDelete = (param) => {
   switch (param) {
     case "eventos":
-      return `http://api.fecope.eu/v1/evento/`;
+      return `http://localhost:8081/v1/evento/`;
     case "noticias":
-      return "http://api.fecope.eu/v1/noticia/";
+      return "http://localhost:8081/v1/noticia/";
     case "asociaciones-fecope":
-      return "http://api.fecope.eu/v1/asociacion/";
+      return "http://localhost:8081/v1/asociacion/";
     case "albums-fotos":
-      return "http://api.fecope.eu/v1/album/";
+      return "http://localhost:8081/v1/album/";
     case "partners":
-      return "http://api.fecope.eu/v1/partner/";
+      return "http://localhost:8081/v1/partner/";
     case "diaspora":
-      return "http://api.fecope.eu/v1/partner/";
+      return "http://localhost:8081/v1/partner/";
     default:
       break;
   }

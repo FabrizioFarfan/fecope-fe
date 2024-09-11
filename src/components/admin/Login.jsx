@@ -1,18 +1,18 @@
 import React, { useState } from "react";
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 export const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [authError, setAuthError] = useState(null);
- const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://api.fecope.eu/auth", {
+      const response = await fetch("http://localhost:8081/auth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

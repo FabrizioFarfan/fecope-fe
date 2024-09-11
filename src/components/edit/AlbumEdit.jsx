@@ -34,7 +34,7 @@ export default function AlbumEdit() {
     async function fetchAlbum(albumId) {
       try {
         const response = await fetch(
-          `http://api.fecope.eu/v0/album/${albumId}`
+          `http://localhost:8081/v0/album/${albumId}`
         );
         if (response.ok) {
           const data = await response.json();
@@ -74,15 +74,18 @@ export default function AlbumEdit() {
     });
 
     try {
-      const response = await fetch(`http://api.fecope.eu/v1/album/${albumId}`, {
-        method: "PUT",
-        headers: {
-          Authorization: `Bearer ${token}`, // Añade el token aquí si es necesario
-          "X-XSRF-TOKEN": getCookie(),
-        },
-        credentials: "include",
-        body: formData,
-      });
+      const response = await fetch(
+        `http://localhost:8081/v1/album/${albumId}`,
+        {
+          method: "PUT",
+          headers: {
+            Authorization: `Bearer ${token}`, // Añade el token aquí si es necesario
+            "X-XSRF-TOKEN": getCookie(),
+          },
+          credentials: "include",
+          body: formData,
+        }
+      );
       // Fotos en Base64 desde el servidor
 
       if (response.ok) {

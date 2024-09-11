@@ -16,7 +16,7 @@ export default function DiasporaEdit() {
     // Asignar valores predefinidos a los inputs
     async function fetchDiaspora(id) {
       try {
-        const response = await fetch(`http://api.fecope.eu/v0/partner/${id}`);
+        const response = await fetch(`http://localhost:8081/v0/partner/${id}`);
         if (response.ok) {
           const diaspora = await response.json();
           console.log(diaspora);
@@ -57,7 +57,7 @@ export default function DiasporaEdit() {
     formData.append("diaspora", true);
 
     console.log(formData);
-    fetch(`http://api.fecope.eu/v1/partner/${diasporaId}`, {
+    fetch(`http://localhost:8081/v1/partner/${diasporaId}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,

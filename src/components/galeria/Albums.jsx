@@ -13,7 +13,7 @@ export const Albums = () => {
 
   useEffect(() => {
     async function fetchAlbums() {
-      let url = `http://api.fecope.eu/v0/all-albums?pageNumber=${currentPage}&pageSize=${pageSize}`;
+      let url = `http://localhost:8081/v0/all-albums?pageNumber=${currentPage}&pageSize=${pageSize}`;
       console.log("Fetching URL:", url); // Asegúrate de que la URL es correcta
       try {
         const response = await fetch(url);

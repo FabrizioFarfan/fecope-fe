@@ -13,7 +13,7 @@ export const Noticias = () => {
 
   useEffect(() => {
     async function fetchNoticias() {
-      let url = `http://api.fecope.eu/v0/all-noticias?pageNumber=${currentPage}&pageSize=${pageSize}`;
+      let url = `http://localhost:8081/v0/all-noticias?pageNumber=${currentPage}&pageSize=${pageSize}`;
 
       try {
         const response = await fetch(url);

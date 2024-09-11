@@ -24,7 +24,7 @@ export const EventoForm = () => {
     formData.append("dataInicio", fechaInicioInputRef.current.value);
     formData.append("dataFinal", fechaFinalInputRef.current.value);
     console.log(formData);
-    fetch("http://api.fecope.eu/v1/create-evento", {
+    fetch("http://localhost:8081/v1/create-evento", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

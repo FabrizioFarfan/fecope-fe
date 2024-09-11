@@ -17,7 +17,7 @@ export const AsociacionesForm = () => {
     console.log(token);
     console.log(tituloInputRef.current.value);
 
-    fetch("http://api.fecope.eu/v1/create-asociacion", {
+    fetch("http://localhost:8081/v1/create-asociacion", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

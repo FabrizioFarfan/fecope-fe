@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { links, linki } from "../../constants";
-import { Link } from "react-router-dom";
 import { ChevronDown, ChevronUp } from "lucide-react";
 
 export const NavLinks = () => {

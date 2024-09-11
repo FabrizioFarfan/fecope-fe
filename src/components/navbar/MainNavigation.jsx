@@ -173,7 +173,7 @@ export const MainNavigation = () => {
             >
               <div className="py-7 px-3  uppercase font-extralight flex gap-1 bg-true-red">
                 <User></User>
-                Videos
+                Admin
               </div>
             </NavLink>
           )}

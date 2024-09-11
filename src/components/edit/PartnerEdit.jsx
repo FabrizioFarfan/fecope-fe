@@ -17,7 +17,7 @@ export default function PartnerEdit() {
     // Asignar valores predefinidos a los inputs
     async function fetchPartner(id) {
       try {
-        const response = await fetch(`http://api.fecope.eu/v0/partner/${id}`);
+        const response = await fetch(`http://localhost:8081/v0/partner/${id}`);
         if (response.ok) {
           const partner = await response.json();
           console.log(partner);
@@ -63,7 +63,7 @@ export default function PartnerEdit() {
     formData.append("diaspora", false);
 
     console.log(formData);
-    fetch(`http://api.fecope.eu/v1/partner/${partnerId}`, {
+    fetch(`http://localhost:8081/v1/partner/${partnerId}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,

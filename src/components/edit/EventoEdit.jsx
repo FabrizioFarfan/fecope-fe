@@ -21,7 +21,7 @@ export default function EventoEdit() {
     async function fetchEvento(eventoId) {
       try {
         const response = await fetch(
-          `http://api.fecope.eu/v0/evento/${eventoId}`
+          `http://localhost:8081/v0/evento/${eventoId}`
         );
         if (response.ok) {
           const evento = await response.json();
@@ -83,7 +83,7 @@ export default function EventoEdit() {
     formData.append("dataInicio", fechaInicioInputRef.current.value);
     formData.append("dataFinal", fechaFinalInputRef.current.value);
     console.log(formData);
-    fetch(`http://api.fecope.eu/v1/evento/${eventoId}`, {
+    fetch(`http://localhost:8081/v1/evento/${eventoId}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,
