@@ -37,7 +37,7 @@ export function getCookie() {
   const cookie = new Cookies();
 
   console.log(cookie.getAll("XSRF-TOKEN"));
-  return cookie.ge("XSRF-TOKEN");
+  return cookie.getAll("XSRF-TOKEN");
 }
 
 export function checkAuthLoader() {
