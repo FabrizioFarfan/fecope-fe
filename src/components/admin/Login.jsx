@@ -12,7 +12,7 @@ export const Login = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8081/auth", {
+      const response = await fetch("http://api.fecope.eu/auth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

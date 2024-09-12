@@ -167,7 +167,7 @@ export const MainNavigation = () => {
 
           {token && (
             <NavLink
-              to="/videos"
+              to="/admin"
               className="text-true-white"
               onClick={() => setOpen(!open)}
             >

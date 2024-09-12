@@ -13,7 +13,7 @@ export const Eventos = () => {
 
   useEffect(() => {
     async function fetchEventos() {
-      let url = `http://localhost:8081/v0/all-eventos?pageNumber=${currentPage}&pageSize=${pageSize}`;
+      let url = `http://api.fecope.eu/v0/all-eventos?pageNumber=${currentPage}&pageSize=${pageSize}`;
       setCurrentPage(currentPage);
       try {
         const response = await fetch(url);

@@ -20,7 +20,7 @@ export default function AsociacionesEdit() {
     async function fetchAsociacion(id) {
       try {
         const response = await fetch(
-          `http://localhost:8081/v0/asociacion/${id}`
+          `http://api.fecope.eu/v0/asociacion/${id}`
         );
         if (response.ok) {
           const asociacion = await response.json();
@@ -53,7 +53,7 @@ export default function AsociacionesEdit() {
   async function handleSubmit(e) {
     e.preventDefault();
 
-    fetch(`http://localhost:8081/v1/update-asociacion/${asociacionId}`, {
+    fetch(`http://api.fecope.eu/v1/update-asociacion/${asociacionId}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,
