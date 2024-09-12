@@ -14,7 +14,7 @@ import yt from "../../dist/assets/Youtube_logo.png";
 import tt from "../../dist/assets/tiktok.png";
 import fb from "../../dist/assets/Facebook.png";
 import inst from "../../dist/assets/instagram.svg";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const extravideos = [
   {
@@ -119,7 +119,7 @@ export function linki(param) {
   switch (param) {
     case "eventos":
       return (
-        <Link
+        <NavLink
           to="/eventos"
           className="text-lg hover:text-dark-red"
           onClick={() => {
@@ -127,12 +127,12 @@ export function linki(param) {
           }}
         >
           Eventos
-        </Link>
+        </NavLink>
       );
 
     case "noticias":
       return (
-        <Link
+        <NavLink
           to="/noticias"
           className="text-lg hover:text-dark-red"
           onClick={() => {
@@ -140,11 +140,11 @@ export function linki(param) {
           }}
         >
           Noticias
-        </Link>
+        </NavLink>
       );
     case "album-fotos":
       return (
-        <Link
+        <NavLink
           to="/album-fotos"
           className="text-lg hover:text-dark-red"
           onClick={() => {
@@ -152,11 +152,11 @@ export function linki(param) {
           }}
         >
           Álbumes
-        </Link>
+        </NavLink>
       );
     case "videos":
       return (
-        <Link
+        <NavLink
           to="/videos"
           className="text-lg hover:text-dark-red"
           onClick={() => {
@@ -164,7 +164,7 @@ export function linki(param) {
           }}
         >
           Videos
-        </Link>
+        </NavLink>
       );
 
     default:

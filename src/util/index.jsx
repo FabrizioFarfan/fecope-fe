@@ -33,11 +33,22 @@ export function getAuthToken() {
 export function tokenLoader() {
   return getAuthToken();
 }
-export function getCookie() {
-  const cookie = new Cookies();
 
-  console.log(cookie.getAll("XSRF-TOKEN"));
-  return cookie.get("XSRF-TOKEN");
+export function getCookie() {
+  const name = "XSRF-TOKEN=";
+  const decodedCookie = decodeURIComponent(document.cookie);
+  const ca = decodedCookie.split(";");
+  for (let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) === " ") {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) === 0) {
+      console.log(c.substring(name.length, c.length));
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
 }
 
 export function checkAuthLoader() {
