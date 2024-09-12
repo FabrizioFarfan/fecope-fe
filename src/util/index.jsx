@@ -35,23 +35,9 @@ export function tokenLoader() {
 }
 export function getCookie() {
   const cookie = new Cookies();
-  let cookieValue = null;
-  if (document.cookie && document.cookie !== "") {
-    const cookies = document.cookie.split(";");
-    for (let i = 0; i < cookies.length; i++) {
-      const cookie = cookies[i].trim();
-      // Does this cookie string begin with the name we want?
-      if (cookie.substring(0, "XSRF-TOKEN".length + 1) === "XSRF-TOKEN" + "=") {
-        cookieValue = decodeURIComponent(
-          cookie.substring("XSRF-TOKEN".length + 1)
-        );
-        break;
-      }
-    }
-  }
-  console.log(cookieValue);
-  console.log(cookie.get("XSRF-TOKEN"));
-  return cookie.get("XSRF-TOKEN");
+
+  console.log(cookie.getAll("XSRF-TOKEN"));
+  return cookie.ge("XSRF-TOKEN");
 }
 
 export function checkAuthLoader() {
