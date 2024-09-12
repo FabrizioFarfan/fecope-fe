@@ -35,6 +35,7 @@ export function tokenLoader() {
 }
 export function getCookie() {
   const cookie = new Cookies();
+  console.log(cookie.get("XSRF-TOKEN"));
   return cookie.get("XSRF-TOKEN");
 }
 
