@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Cards } from "../Cards";
 import { InicioPagina } from "../InicioPagina";
 import { Pagination } from "../Pagination";
-import noticia from "../../../dist/assets/noticia.jpg";
+import noticia from "../../assets/noticia.jpg";
 
 export const Noticias = () => {
   const [eventos, setEventos] = useState([]);

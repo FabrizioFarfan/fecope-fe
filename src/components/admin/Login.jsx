@@ -8,12 +8,11 @@ export const Login = () => {
   const [authError, setAuthError] = useState(null);
   const navigate = useNavigate();
   useEffect(() => {
-    first;
-
-    return () => {
-      second;
-    };
-  }, [third]);
+    if (formRef.current) {
+      formRef.current.scrollIntoView({ behavior: "smooth", block: "start" });
+      formRef.current.focus();
+    }
+  }, []);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -53,12 +52,12 @@ export const Login = () => {
     }
   };
   return (
-    <div className="flex items-center justify-center min-h-screen">
+    <div
+      className="flex items-center justify-center min-h-screen"
+      ref={formRef}
+    >
       <div className="w-full max-w-md p-3 px-10 text-true-white rounded-lg bg-true-red shadow-xl">
-        <h2
-          className="text-3xl font-semibold italic text-center mb-6"
-          ref={formRef}
-        >
+        <h2 className="text-3xl font-semibold italic text-center mb-6">
           Login
         </h2>
         <form onSubmit={handleSubmit}>
