@@ -13,7 +13,7 @@ export const Evento = () => {
     async function fetchEvento(eventoId) {
       try {
         const response = await fetch(
-          `http://api.fecope.eu/v0/evento/${eventoId}`
+          `https://api.fecope.eu/v0/evento/${eventoId}`
         );
         if (response.ok) {
           const data = await response.json();

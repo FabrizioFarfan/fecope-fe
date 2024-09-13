@@ -7,7 +7,7 @@ export const Networking = () => {
 
   useEffect(() => {
     async function fetchPartners() {
-      let url = "http://api.fecope.eu/v0/all-partners";
+      let url = "https://api.fecope.eu/v0/all-partners";
       console.log("Fetching URL:", url);
       try {
         const response = await fetch(url);

@@ -34,7 +34,7 @@ export default function AlbumEdit() {
     async function fetchAlbum(albumId) {
       try {
         const response = await fetch(
-          `http://api.fecope.eu/v0/album/${albumId}`
+          `https://api.fecope.eu/v0/album/${albumId}`
         );
         if (response.ok) {
           const data = await response.json();
@@ -74,7 +74,7 @@ export default function AlbumEdit() {
     });
 
     try {
-      const response = await fetch(`http://api.fecope.eu/v1/album/${albumId}`, {
+      const response = await fetch(`https://api.fecope.eu/v1/album/${albumId}`, {
         method: "PUT",
         headers: {
           Authorization: `Bearer ${token}`, // Añade el token aquí si es necesario

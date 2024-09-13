@@ -20,7 +20,7 @@ export const Noticia = () => {
     async function fetchEvento(noticiaId) {
       try {
         const response = await fetch(
-          `http://api.fecope.eu/v0/noticia/${noticiaId}`
+          `https://api.fecope.eu/v0/noticia/${noticiaId}`
         );
         if (response.ok) {
           const data = await response.json();

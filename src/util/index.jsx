@@ -1,5 +1,4 @@
 import { redirect } from "react-router-dom";
-import Cookies from "universal-cookie";
 import { AlbumForm } from "../components/form/AlbumForm";
 import { AsociacionesForm } from "../components/form/AsociacionesForm";
 import { DiasporaForm } from "../components/form/DiasporaForm";
@@ -139,17 +138,17 @@ export const form = (param) => {
 export const urlToFetch = (param) => {
   switch (param) {
     case "eventos":
-      return "http://api.fecope.eu/v1/all-eventos";
+      return "https://api.fecope.eu/v1/all-eventos";
     case "noticias":
-      return "http://api.fecope.eu/v1/all-noticias";
+      return "https://api.fecope.eu/v1/all-noticias";
     case "asociaciones-fecope":
-      return "http://api.fecope.eu/v1/all-asociaciones";
+      return "https://api.fecope.eu/v1/all-asociaciones";
     case "albums-fotos":
-      return "http://api.fecope.eu/v1/all-albums";
+      return "https://api.fecope.eu/v1/all-albums";
     case "partners":
-      return "http://api.fecope.eu/v1/all-partners";
+      return "https://api.fecope.eu/v1/all-partners";
     case "diaspora":
-      return "http://api.fecope.eu/v1/all-diasporas";
+      return "https://api.fecope.eu/v1/all-diasporas";
     default:
       break;
   }
@@ -158,17 +157,17 @@ export const urlToFetch = (param) => {
 export const urlToDelete = (param) => {
   switch (param) {
     case "eventos":
-      return `http://api.fecope.eu/v1/evento/`;
+      return `https://api.fecope.eu/v1/evento/`;
     case "noticias":
-      return "http://api.fecope.eu/v1/noticia/";
+      return "https://api.fecope.eu/v1/noticia/";
     case "asociaciones-fecope":
-      return "http://api.fecope.eu/v1/asociacion/";
+      return "https://api.fecope.eu/v1/asociacion/";
     case "albums-fotos":
-      return "http://api.fecope.eu/v1/album/";
+      return "https://api.fecope.eu/v1/album/";
     case "partners":
-      return "http://api.fecope.eu/v1/partner/";
+      return "https://api.fecope.eu/v1/partner/";
     case "diaspora":
-      return "http://api.fecope.eu/v1/partner/";
+      return "https://api.fecope.eu/v1/partner/";
     default:
       break;
   }

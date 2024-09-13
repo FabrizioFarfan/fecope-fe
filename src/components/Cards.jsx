@@ -31,7 +31,7 @@ export const Cards = ({ data, currentPage, pageSize }) => {
               {item.titulo}
             </h3>
             <div className="flex justify-center w-full">
-              <p className="font-light text-sm sm:text-base md:text-lg m-2 text-left text-ellipsis overflow-hidden max-h-[4.5rem] line-clamp-3">
+              <p className="font-light text-sm sm:text-base md:text-lg m-2 text-left text-ellipsis overflow-hidden max-h-[6.5rem] line-clamp-3">
                 {item.descripcion}
               </p>
             </div>

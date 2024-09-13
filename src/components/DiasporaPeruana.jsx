@@ -8,7 +8,7 @@ export const DiasporaPeruana = () => {
   ]);
   useEffect(() => {
     async function fetchDiasporas() {
-      let url = "http://api.fecope.eu/v0/all-diasporas";
+      let url = "https://api.fecope.eu/v0/all-diasporas";
       console.log("Fetching URL:", url);
       try {
         const response = await fetch(url);

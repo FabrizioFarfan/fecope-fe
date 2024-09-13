@@ -17,7 +17,7 @@ export const DiasporaForm = () => {
     formData.append("diaspora", true);
 
     console.log(formData);
-    fetch("http://api.fecope.eu/v1/create-partner", {
+    fetch("https://api.fecope.eu/v1/create-partner", {
       method: "POST",
       headers: {
         Authorization: `Bearer ${token}`,

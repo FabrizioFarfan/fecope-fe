@@ -8,8 +8,8 @@ export const LastNews = ({ titulo }) => {
     async function fetchNews() {
       const url =
         titulo === "Últimos Eventos"
-          ? "http://api.fecope.eu/v0/ultimos-tres-eventos"
-          : "http://api.fecope.eu/v0/ultimas-tres-noticias";
+          ? "https://api.fecope.eu/v0/ultimos-tres-eventos"
+          : "https://api.fecope.eu/v0/ultimas-tres-noticias";
       console.log("Fetching URL:", url); // Asegúrate de que la URL es correcta
       try {
         const response = await fetch(url);

@@ -18,7 +18,7 @@ export default function NoticiaEdit() {
     // Asignar valores predefinidos a los inputs
     async function fetchNoticia(id) {
       try {
-        const response = await fetch(`http://api.fecope.eu/v0/noticia/${id}`);
+        const response = await fetch(`https://api.fecope.eu/v0/noticia/${id}`);
         if (response.ok) {
           const noticia = await response.json();
           console.log(noticia);
@@ -68,7 +68,7 @@ export default function NoticiaEdit() {
     formData.append("descripcion", descripcionInputRef.current.value);
     formData.append("contenido", contenidoInputRef.current.value);
     console.log(formData);
-    fetch(`http://api.fecope.eu/v1/noticia/${noticiaId}`, {
+    fetch(`https://api.fecope.eu/v1/noticia/${noticiaId}`, {
       method: "PUT",
       headers: {
         Authorization: `Bearer ${token}`,

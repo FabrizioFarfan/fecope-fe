@@ -10,7 +10,7 @@ export const Album = () => {
     async function fetchAlbum(albumId) {
       try {
         const response = await fetch(
-          `http://api.fecope.eu/v0/album/${albumId}`
+          `https://api.fecope.eu/v0/album/${albumId}`
         );
         if (response.ok) {
           const data = await response.json();

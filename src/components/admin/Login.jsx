@@ -1,18 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useNavigate } from "react-router-dom";
-
 export const Login = () => {
+  const formRef = useRef();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [authError, setAuthError] = useState(null);
   const navigate = useNavigate();
+  useEffect(() => {
+    first;
+
+    return () => {
+      second;
+    };
+  }, [third]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://api.fecope.eu/auth", {
+      const response = await fetch("https://api.fecope.eu/auth", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -48,7 +55,10 @@ export const Login = () => {
   return (
     <div className="flex items-center justify-center min-h-screen">
       <div className="w-full max-w-md p-3 px-10 text-true-white rounded-lg bg-true-red shadow-xl">
-        <h2 className="text-3xl font-semibold italic text-center mb-6">
+        <h2
+          className="text-3xl font-semibold italic text-center mb-6"
+          ref={formRef}
+        >
           Login
         </h2>
         <form onSubmit={handleSubmit}>
