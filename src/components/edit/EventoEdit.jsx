@@ -148,7 +148,7 @@ export default function EventoEdit() {
         </div>
         <div className="mb-4">
           <label className="block text-sm font-bold mb-2">
-            Título del Evento(Máx. 70 letras)
+            Título del Evento
           </label>
           <input
             type="text"
@@ -191,7 +191,7 @@ export default function EventoEdit() {
         {/* Descripción del Evento */}
         <div className="mb-4">
           <label className="block text-sm font-bold mb-2">
-            Descripción del Evento(Máx. 150 letras)
+            Descripción del Evento
           </label>
           <textarea
             placeholder="Descripción"

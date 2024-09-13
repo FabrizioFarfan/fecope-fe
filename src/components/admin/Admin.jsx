@@ -1,7 +1,7 @@
 import React from "react";
 import { InicioPagina } from "../InicioPagina";
 import { Panel } from "./Panel";
-import admin from "../../../dist/assets/admin.jpg";
+import admin from "../../assets/admin.jpg";
 
 export const Admin = () => {
   return (

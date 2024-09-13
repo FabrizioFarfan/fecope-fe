@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { paisesEuropeos } from "../constants";
-import instagram from "../../dist/assets/instagram.svg";
-import facebook from "../../dist/assets/facebook.svg";
+import instagram from "../assets/instagram.svg";
+import facebook from "../assets/facebook.svg";
 import { Globe } from "lucide-react";
 
 export const AsociacionesList = () => {

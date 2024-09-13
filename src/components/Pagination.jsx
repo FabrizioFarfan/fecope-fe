@@ -1,6 +1,5 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import React from "react";
-import { Link } from "react-router-dom";
+import React from "react"; 
 
 export const Pagination = ({ onPageChange, currentPage, data, pageSize }) => {
   const totalPages = Math.ceil(data / pageSize);

@@ -3,7 +3,7 @@ import { InicioPagina } from "../InicioPagina";
 import { extravideos, videos } from "../../constants";
 import { SeccionVideo } from "../SeccionVideo";
 import ReactPlayer from "react-player";
-import video from "../../../dist/assets/vid1.png";
+import video from "../../assets/vid1.png";
 
 export const Videos = () => {
   return (

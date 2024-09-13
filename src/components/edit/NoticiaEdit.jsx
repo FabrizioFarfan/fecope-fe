@@ -134,7 +134,7 @@ export default function NoticiaEdit() {
         </div>
         <div className="mb-4">
           <label className="block text-sm font-bold mb-2">
-            Título de la Noticia(Máx. 70 letras)
+            Título de la Noticia
           </label>
           <input
             type="text"
@@ -147,7 +147,7 @@ export default function NoticiaEdit() {
         {/* Descripción del Evento */}
         <div className="mb-4">
           <label className="block text-sm font-bold mb-2">
-            Descripción de la Noticia(Máx. 150 letras)
+            Descripción de la Noticia
           </label>
           <textarea
             placeholder="Descripción"

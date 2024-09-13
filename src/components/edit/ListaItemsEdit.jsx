@@ -78,7 +78,7 @@ export const ListaItemsEdit = ({ param }) => {
               <td className="p-4">
                 <div className="flex justify-center">
                   <Link
-                    to={`/edit/${item.id}`}
+                    to={`edit/${item.id}`}
                     className="text-dark-red border  text-xs bg-true-white px-1 py-1 rounded-lg  hover:bg-dark-red hover:bg-opacity-85 hover:text-true-white transition  mr-3 duration-300"
                   >
                     Edita

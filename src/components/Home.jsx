@@ -8,7 +8,7 @@ import { DiasporaPeruana } from "./DiasporaPeruana";
 import { LastNews } from "./LastNews";
 import { SeccionVideo } from "./SeccionVideo";
 import { videos } from "../constants";
-import home from "../../dist/assets/logo.jpeg";
+import home from "../assets/logo.jpeg";
 
 export const Home = () => {
   return (

@@ -1,8 +1,8 @@
 import React from "react";
-import instagram from "../../../dist/assets/instagram.svg";
-import facebook from "../../../dist/assets/facebook.svg";
-import tiktok from "../../../dist/assets/tiktok.svg";
-import { Link, useRouteLoaderData } from "react-router-dom";
+import instagram from "../../assets/instagram.svg";
+import facebook from "../../assets/facebook.svg";
+import tiktok from "../../assets/tiktok.svg";
+import { Link, redirect, useRouteLoaderData } from "react-router-dom";
 import { Networking } from "../Networking";
 
 export const Footer = () => {
@@ -34,6 +34,21 @@ export const Footer = () => {
               <li className="mb-1">
                 <Link to="/login" className="hover:underline">
                   Admin
+                </Link>
+              </li>
+            )}
+            {token && (
+              <li className="mb-1">
+                <Link
+                  to="/"
+                  className="hover:underline"
+                  onClick={() => {
+                    localStorage.removeItem("token");
+                    localStorage.removeItem("expiration");
+                    redirect("/");
+                  }}
+                >
+                  Logout
                 </Link>
               </li>
             )}

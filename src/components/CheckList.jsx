@@ -1,5 +1,5 @@
 import React from "react";
-import presidente from "../../dist/assets/presidente.jpg";
+import presidente from "../assets/presidente.jpg";
 import { checkList } from "../constants";
 import { CheckCircle2 } from "lucide-react";
 

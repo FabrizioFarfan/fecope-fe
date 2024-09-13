@@ -6,14 +6,14 @@ import {
   PersonStanding,
   LibraryBig,
 } from "lucide-react";
-import martin from "../../dist/assets/martin.jpeg";
-import tipo1 from "../../dist/assets/tipo1.jpeg";
-import tipo from "../../dist/assets/tipo.jpeg";
-import tesorera from "../../dist/assets/tesorerajpeg.jpeg";
-import yt from "../../dist/assets/Youtube_logo.png";
-import tt from "../../dist/assets/tiktok.png";
-import fb from "../../dist/assets/Facebook.png";
-import inst from "../../dist/assets/instagram.svg";
+import martin from "../assets/martin.jpeg";
+import tipo1 from "../assets/tipo1.jpeg";
+import tipo from "../assets/tipo.jpeg";
+import tesorera from "../assets/tesorerajpeg.jpeg";
+import yt from "../assets/Youtube_logo.png";
+import tt from "../assets/tiktok.png";
+import fb from "../assets/Facebook.png";
+import inst from "../assets/instagram.svg";
 import { NavLink } from "react-router-dom";
 
 export const extravideos = [

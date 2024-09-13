@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { InicioPagina } from "../InicioPagina";
 import { AlbumsCard } from "../AlbumsCard";
 import { Pagination } from "../Pagination";
-import album from "../../../dist/assets/album.jpg";
+import album from "../../assets/album.jpg";
 
 export const Albums = () => {
   const [albums, setAlbums] = useState([]);

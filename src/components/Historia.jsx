@@ -1,8 +1,8 @@
 import React from "react";
 import { InicioPagina } from "./InicioPagina";
-import sello from "../../dist/assets/sello.png";
-import linea from "../../dist/assets/linea.png";
-import historia from "../../dist/assets/historia.jpg";
+import sello from "../assets/sello.png";
+import linea from "../assets/linea.png";
+import historia from "../assets/historia.jpg";
 
 export const Historia = () => {
   return (
