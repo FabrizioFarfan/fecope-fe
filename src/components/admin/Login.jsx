@@ -44,7 +44,7 @@ export const Login = () => {
       const expiration = new Date();
       expiration.setHours(expiration.getHours() + 24);
       localStorage.setItem("expiration", expiration.toISOString());
-      navigate("/admin");
+      window.location.href = "/admin";
     } catch (error) {
       console.error("Error during authentication:", error);
       setIsSubmitting(false);

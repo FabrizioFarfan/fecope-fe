@@ -7,6 +7,31 @@ import { Networking } from "../Networking";
 
 export const Footer = () => {
   const token = useRouteLoaderData("root");
+
+  const handleLogout = async () => {
+    fetch("https://api.fecope.eu/auth/logout", {
+      method: "POST", // O 'GET', dependiendo de cómo lo manejes en el backend
+      credentials: "include", // Esto incluye las cookies en la solicitud
+    })
+      .then((response) => {
+        if (response.ok) {
+          // Logout exitoso
+          ("Logout exitoso");
+          // Eliminar token y expiración del localStorage después del logout exitoso
+          localStorage.removeItem("token");
+          localStorage.removeItem("expiration");
+          // Redirigir al usuario a la página de login o página de inicio
+          window.location.href = "/";
+        } else {
+          // Manejar el caso donde el logout no haya sido exitoso
+          console.error("Error al hacer logout");
+        }
+      })
+      .catch((error) => {
+        console.error("Error en el fetch de logout:", error);
+      });
+  };
+
   return (
     <footer className="bg-true-red text-true-white py-8 mt-20">
       <div className="container mx-auto px-10 grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -43,9 +68,7 @@ export const Footer = () => {
                   to="/"
                   className="hover:underline"
                   onClick={() => {
-                    localStorage.removeItem("token");
-                    localStorage.removeItem("expiration");
-                    redirect("/");
+                    handleLogout();
                   }}
                 >
                   Logout
