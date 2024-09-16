@@ -2,7 +2,7 @@ import React from "react";
 import instagram from "../../assets/instagram.svg";
 import facebook from "../../assets/facebook.svg";
 import tiktok from "../../assets/tiktok.svg";
-import { Link, redirect, useRouteLoaderData } from "react-router-dom";
+import { Link, useRouteLoaderData } from "react-router-dom";
 import { Networking } from "../Networking";
 
 export const Footer = () => {
@@ -11,6 +11,10 @@ export const Footer = () => {
   const handleLogout = async () => {
     fetch("https://api.fecope.eu/auth/logout", {
       method: "POST", // O 'GET', dependiendo de cómo lo manejes en el backend
+      headers: {
+        Authorization: "Bearer " + token, // El encabezado Authorization va dentro de headers
+        "Content-Type": "application/json", // Asegúrate de enviar el tipo correcto de contenido
+      },
       credentials: "include", // Esto incluye las cookies en la solicitud
     })
       .then((response) => {
